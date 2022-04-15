@@ -1,0 +1,6 @@
+framework module Pods_emailChipViewTests {
+  umbrella header "Pods-emailChipViewTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

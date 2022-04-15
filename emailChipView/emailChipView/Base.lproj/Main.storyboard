@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f7M-2k-JLA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Send View Controller-->
+        <scene sceneID="tfT-0h-mg8">
+            <objects>
+                <viewController storyboardIdentifier="SendViewController" id="f7M-2k-JLA" customClass="SendViewController" customModule="emailChipView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aT3-i0-kNM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="1gf-qt-TSj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="780"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Nn-vY-LOC" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="305"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="loG-sp-W2L">
+                                                <rect key="frame" x="0.0" y="225" width="414" height="64"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="HTo-um-7bf"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="naM-f2-K7f">
+                                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="naM-f2-K7f" id="jcy-Js-Ib9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="f7M-2k-JLA" id="7t5-AX-wCS"/>
+                                                    <outlet property="delegate" destination="f7M-2k-JLA" id="Nnv-gu-jXF"/>
+                                                </connections>
+                                            </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKj-mO-d97">
+                                                <rect key="frame" x="16" y="32" width="382" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Ha2-2B-1eW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.74509803921568629" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gXw-yR-EUi">
+                                                <rect key="frame" x="16" y="57" width="334" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="dMk-2X-HXT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="f7M-2k-JLA" id="qMu-4i-fYx"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MG-4I-1qb">
+                                                <rect key="frame" x="358" y="57" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="kUy-L9-Eny"/>
+                                                    <constraint firstAttribute="height" constant="40" id="lQj-pJ-Zvc"/>
+                                                </constraints>
+                                                <state key="normal" image="plus" catalog="system"/>
+                                                <connections>
+                                                    <action selector="tapAddEmail:" destination="f7M-2k-JLA" eventType="touchUpInside" id="hrx-C4-XPZ"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tB-30-L8U">
+                                                <rect key="frame" x="16" y="98" width="382" height="1"/>
+                                                <color key="backgroundColor" red="0.20000000000000001" green="0.74509803921568629" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Y5y-Qd-W3D"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OG-z6-c6h">
+                                                <rect key="frame" x="161" y="128" width="92" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="lMI-uY-hCu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                                <state key="normal" title="My Contacts">
+                                                    <color key="titleColor" red="0.0" green="0.45882352941176469" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently used  email address(es)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fua-Q3-8jl">
+                                                <rect key="frame" x="16" y="188" width="382" height="21"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <color key="highlightedColor" red="0.31372549019607843" green="0.33725490196078434" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="loG-sp-W2L" secondAttribute="bottom" constant="16" id="0KI-2S-EQw"/>
+                                            <constraint firstAttribute="trailing" secondItem="XKj-mO-d97" secondAttribute="trailing" constant="16" id="0z1-PL-i1H"/>
+                                            <constraint firstItem="2MG-4I-1qb" firstAttribute="centerY" secondItem="gXw-yR-EUi" secondAttribute="centerY" id="3Ap-C8-8QN"/>
+                                            <constraint firstItem="loG-sp-W2L" firstAttribute="top" secondItem="fua-Q3-8jl" secondAttribute="bottom" constant="16" id="Cgf-mH-dAs"/>
+                                            <constraint firstAttribute="trailing" secondItem="fua-Q3-8jl" secondAttribute="trailing" constant="16" id="K7n-Zq-ELc"/>
+                                            <constraint firstItem="8tB-30-L8U" firstAttribute="top" secondItem="gXw-yR-EUi" secondAttribute="bottom" constant="1" id="LLY-AY-MaZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="8tB-30-L8U" secondAttribute="trailing" constant="16" id="MNa-mp-7U6"/>
+                                            <constraint firstItem="XKj-mO-d97" firstAttribute="top" secondItem="7Nn-vY-LOC" secondAttribute="top" constant="32" id="O10-Bx-n5v"/>
+                                            <constraint firstItem="7OG-z6-c6h" firstAttribute="top" secondItem="7Nn-vY-LOC" secondAttribute="top" constant="128" id="TPg-Ec-fY8"/>
+                                            <constraint firstItem="fua-Q3-8jl" firstAttribute="leading" secondItem="7Nn-vY-LOC" secondAttribute="leading" constant="16" id="WmH-1Z-URO"/>
+                                            <constraint firstItem="fua-Q3-8jl" firstAttribute="top" secondItem="7OG-z6-c6h" secondAttribute="bottom" constant="36" id="ZcC-yw-bHD"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="300" id="aM9-fO-b9H"/>
+                                            <constraint firstItem="loG-sp-W2L" firstAttribute="leading" secondItem="7Nn-vY-LOC" secondAttribute="leading" id="dfH-Ti-iTY"/>
+                                            <constraint firstItem="gXw-yR-EUi" firstAttribute="top" secondItem="XKj-mO-d97" secondAttribute="bottom" constant="4" id="jtn-a1-0ba"/>
+                                            <constraint firstAttribute="trailing" secondItem="2MG-4I-1qb" secondAttribute="trailing" constant="16" id="mbz-sX-BrP"/>
+                                            <constraint firstAttribute="trailing" secondItem="loG-sp-W2L" secondAttribute="trailing" id="pim-xO-e6w"/>
+                                            <constraint firstItem="gXw-yR-EUi" firstAttribute="leading" secondItem="7Nn-vY-LOC" secondAttribute="leading" constant="16" id="qXo-2Q-v8t"/>
+                                            <constraint firstItem="2MG-4I-1qb" firstAttribute="leading" secondItem="gXw-yR-EUi" secondAttribute="trailing" constant="8" id="wq0-xV-Zdd"/>
+                                            <constraint firstItem="8tB-30-L8U" firstAttribute="leading" secondItem="7Nn-vY-LOC" secondAttribute="leading" constant="16" id="xUB-nC-4Le"/>
+                                            <constraint firstItem="XKj-mO-d97" firstAttribute="leading" secondItem="7Nn-vY-LOC" secondAttribute="leading" constant="16" id="xui-xP-mzi"/>
+                                            <constraint firstItem="7OG-z6-c6h" firstAttribute="centerX" secondItem="7Nn-vY-LOC" secondAttribute="centerX" id="zd8-FA-QVN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7Nn-vY-LOC" firstAttribute="leading" secondItem="1gf-qt-TSj" secondAttribute="leading" id="5lG-BS-s2i"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Nn-vY-LOC" secondAttribute="bottom" id="6X1-z6-WZs"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Nn-vY-LOC" secondAttribute="trailing" id="8ev-Qi-VdJ"/>
+                                    <constraint firstItem="7Nn-vY-LOC" firstAttribute="top" secondItem="1gf-qt-TSj" secondAttribute="top" id="JI1-AB-EvC"/>
+                                    <constraint firstItem="7Nn-vY-LOC" firstAttribute="width" secondItem="1gf-qt-TSj" secondAttribute="width" id="rsF-vY-LYj"/>
+                                </constraints>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="d83-i0-x38">
+                                <rect key="frame" x="35" y="824" width="344" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvC-Jg-aZs">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="48"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.31372549019607843" green="0.33725490196078434" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapCancel:" destination="f7M-2k-JLA" eventType="touchUpInside" id="TJo-D8-3lB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLq-vP-m71">
+                                        <rect key="frame" x="172" y="0.0" width="172" height="48"/>
+                                        <color key="backgroundColor" red="0.8901960784313725" green="0.90588235294117647" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" red="0.69803921568627447" green="0.72156862745098038" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tapSendEmail:" destination="f7M-2k-JLA" eventType="touchUpInside" id="99q-wn-65G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Bp6-or-ypN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vYg-h6-DLn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1gf-qt-TSj" firstAttribute="leading" secondItem="vYg-h6-DLn" secondAttribute="leading" id="88s-ZO-wKe"/>
+                            <constraint firstItem="1gf-qt-TSj" firstAttribute="top" secondItem="vYg-h6-DLn" secondAttribute="top" id="CKM-gj-Jxj"/>
+                            <constraint firstItem="vYg-h6-DLn" firstAttribute="trailing" secondItem="1gf-qt-TSj" secondAttribute="trailing" id="EGQ-gq-d9J"/>
+                            <constraint firstItem="d83-i0-x38" firstAttribute="leading" secondItem="vYg-h6-DLn" secondAttribute="leading" constant="35" id="F0N-rz-Bdc"/>
+                            <constraint firstItem="vYg-h6-DLn" firstAttribute="trailing" secondItem="d83-i0-x38" secondAttribute="trailing" constant="35" id="KYc-Cj-sWy"/>
+                            <constraint firstItem="d83-i0-x38" firstAttribute="top" secondItem="1gf-qt-TSj" secondAttribute="bottom" id="MzG-WN-5kO"/>
+                            <constraint firstAttribute="bottom" secondItem="d83-i0-x38" secondAttribute="bottom" constant="24" id="p9U-Yv-ss9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tDZ-Ht-xIe"/>
+                    <connections>
+                        <outlet property="bottomView" destination="8tB-30-L8U" id="DPW-Dk-rrq"/>
+                        <outlet property="cancelButton" destination="bvC-Jg-aZs" id="aX9-j3-shz"/>
+                        <outlet property="contentView" destination="7Nn-vY-LOC" id="N6C-Xr-MYa"/>
+                        <outlet property="emailTextField" destination="gXw-yR-EUi" id="Amn-vW-IvM"/>
+                        <outlet property="heightTableView" destination="HTo-um-7bf" id="7XL-Fd-7Gd"/>
+                        <outlet property="sendEmailButton" destination="LLq-vP-m71" id="XH4-iP-4Dr"/>
+                        <outlet property="tableView" destination="loG-sp-W2L" id="AdE-KQ-Taf"/>
+                        <outlet property="topButtonMyContactsConstraint" destination="TPg-Ec-fY8" id="fgK-SS-b2A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mH0-zo-24b" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="-736"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

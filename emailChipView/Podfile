@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'emailChipView' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for emailChipView
+pod 'IQKeyboardManagerSwift'
+
+  target 'emailChipViewTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'emailChipViewUITests' do
+    # Pods for testing
+  end
+
+end
